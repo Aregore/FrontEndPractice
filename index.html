@@ -1,0 +1,78 @@
+
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>To infinity and beyond</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="scripts.js"></script>
+	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+	</head>
+<body>
+	<div id ="bodypage">
+		<nav class="nav">
+		<img id="menuimg1" class="menupic" src ="images/earth.svg" onClick="main()">
+		<img id="menuimg2" class="menupic" src ="images/rocket.svg" onClick="ships()">
+		<img id="menuimg3" class="menupic" src ="images/spacesuit.svg" onClick="crew()">
+		<img id="menuimg4" class="menupic" src ="images/thermometr.svg" onClick="weather()">
+		</nav>
+		<div class="cornerplanet"></div>
+		<div class="mainrocket"></div>
+	<div id ="mainfield">
+		
+		<div class="status">
+			<div class="status-header">
+			<span><b>Статус</b></span>
+			<span><button class="button-go">Поехали!</button></span>
+			</div>
+			<hr>
+			<ul class="status-list">
+				<li><span>Ракета выбрана</span></li>
+				<li><span>Команда собрана</span></li>
+				<li><span>Погода - ок</span></li>
+			</ul>
+		</div>
+		<div class="weather">
+			<div class="weather-header">
+				<span><b>Погодные условия</b></span>
+			</div>
+			<hr>
+			<div class="weather-list">
+				<span class="lefttext">Локация</span><span class="righttext">Космодром Северный </span>
+				<hr>
+				<span class="lefttext">Температура</span><span class="righttext">+15</span>
+				<hr>
+				<span class="lefttext">Влажность</span><span class="righttext">в чем там измеряют влажность</span>
+				<hr>
+				<span class="lefttext">Ветер</span><span class="righttext">5 м\с, СЗ</span>
+			</div>
+		</div>
+		<div class="crew">
+		<div class="crew-header">
+			<span><b>Экипаж</b></span>
+			</div>
+			<hr>
+			<div class="crew-list">
+				<div>
+				<span class="captain">Капитан</span><span class="righttext">Константин Константинопольский</span>
+				<hr>
+				</div>
+				<div>
+				<span class="engineer">Борт инженер</span><span class="righttext">Иван Иванов</span>
+				<hr>
+				</div>
+				<div>
+				<span class="doctor">Врач</span><span class="righttext">Петр Петров</span>
+				<hr>
+				</div>
+				<div>
+				<span class="spacemarine">Космодесантник</span><span class="righttext">Анастасия Преображенская</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="shipchoice"><h1>Выбор корабля</h1></div>
+	<div id="crewchoice"><h1>Сбор команды</h1></div>
+	<div id="temchoice"><h1>Проверка погодных условий</h1></div>
+</div>
+</body>
+</html>
