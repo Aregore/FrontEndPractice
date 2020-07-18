@@ -1,78 +1,184 @@
-
 <html>
 	<head>
-	<meta charset="UTF-8">
-	<title>To infinity and beyond</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="scripts.js"></script>
-	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+		<meta charset="utf-8">
+		<title> To infinity and beyond </title>
+		<link rel="stylesheet" type="text/css" href="style.css">			
 	</head>
-<body>
-	<div id ="bodypage">
-		<nav class="nav">
-		<img id="menuimg1" class="menupic" src ="images/earth.svg" onClick="main()">
-		<img id="menuimg2" class="menupic" src ="images/rocket.svg" onClick="ships()">
-		<img id="menuimg3" class="menupic" src ="images/spacesuit.svg" onClick="crew()">
-		<img id="menuimg4" class="menupic" src ="images/thermometr.svg" onClick="weather()">
-		</nav>
-		<div class="cornerplanet"></div>
-		<div class="mainrocket"></div>
-	<div id ="mainfield">
-		
-		<div class="status">
-			<div class="status-header">
-			<span><b>Статус</b></span>
-			<span><button class="button-go">Поехали!</button></span>
+	
+	<body>
+		<div class="bodypage">
+			<nav class="nav">
+				<img class="nav-icon clicked" id="main_button" src="images/earth.svg" alt="Planet">
+				<img class="nav-icon" id="ships_button" src="images/ship3.svg" alt="Rocket">
+				<img class="nav-icon" id="crew_button" src="images/spacesuit.svg" alt="Spacesuit">
+				<img class="nav-icon" id="weather_button" src="images/thermometer.svg" alt="Thermometer">
+			</nav>
+			<div class="site-main" id="main">
+				<div class="left-content">
+					<div class="status">
+						<div class="status-header underline text-padding">
+							<span><b>Статус</b></span>
+							<span class="right" style="padding-right: 15%;"><button class="button-go" disabled>Поехали!</button></span>
+						</div>					
+						<div>
+							<ul class="status-list">
+								<li>Ракета выбрана</li>
+								<li>Команда собрана</li>
+								<li>Погода - ок</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="status">
+						<div class="status-header underline text-padding">
+							<span><b>Погодные условия</b></span>
+						</div>	
+						<div class="content-list">
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Локация</a></span>
+								<span>Космодром Северный</span>
+							</div>						
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Температура</a></span>
+								<span>+15</span>
+							</div>						
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Влажность</a></span>
+								<span>В чем там измеряется влажность</span>
+							</div>						
+							<div class="text-padding">
+								<span class="bold"><a href="#">Ветер</a></span>
+								<span>5 м/c СЗ</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="status">
+						<div class="status-header underline text-padding">
+							<span><b>Экипаж</b></span>
+						</div>	
+						<div class="content-list">
+							<div class="underline text-padding">
+								<span class="bold" style="color: red;">Капитан</span>
+								<span>Константин Константинопольский</span>
+							</div>						
+							<div class="underline text-padding">
+								<span class="bold" style="color: orange;">Механикус</span>
+								<span>Иван Иванов</span>
+							</div>						
+							<div class="underline text-padding">
+								<span class="bold" style="color: green;">Апотекарий</span>
+								<span>Петр Петров</span>
+							</div>						
+							<div class="text-padding" >
+								<span class="bold" style="color: blue;">Космодесантник</span>
+								<span>Анастасия Преображенская</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right-content">
+					<img class="planet-img" src="images/cornerplanet.svg" style="border-radius: 0px 40px 0px 0px;">
+					<img class="rocket-img" src="images/mainrocket.svg" style="height: 450px; padding-top: 20%;">
+				</div>				
 			</div>
-			<hr>
-			<ul class="status-list">
-				<li><span>Ракета выбрана</span></li>
-				<li><span>Команда собрана</span></li>
-				<li><span>Погода - ок</span></li>
-			</ul>
+			<div class="site-main" id="ships">	
+				<div class="left-content">
+					<h1>Выбор корабля</h1>
+					<div class="status ship">
+						<div class="status-header underline text-padding">
+							<span><b>Корабль</b></span>
+							<span class="right" style="padding-right: 15%;"><button id="build-rocket" class="build-btn">Собрать ракету</button></span>
+						</div>	
+						<div class="ship-img"><img id="rocket-icon" src="images/ship3.svg" alt="Rocket"></div>								
+						<div class="content-list rocket-info">
+							<div class="text-padding">
+								<span class="bold"><a href="#">Имя</a></span>
+								<span id="rocket-name">Сокол-345</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Скорость</a></span>
+								<span id="rocket-speed">8 км\c</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Экипаж</a></span>
+								<span id="rocket-capacity">2</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="ship-choose">
+						<div class="ship-img"><img id="rocket-icon1" src="images/ship1.svg" alt="Rocket"></div>								
+						<div class="content-list rocket-info">
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Имя</a></span>
+								<span id="name1">Урског-123</span>
+							</div>
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Скорость</a></span>
+								<span id="speed1">6 км\c</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Экипаж</a></span>
+								<span id="capacity1">4</span>
+							</div>
+						</div>
+						<div class="radio-field">
+							<input type="radio" name="ship-choose" class="radio" id="radio1" value="1" /><label for="radio1">Выбрать</label>
+						</div>
+					</div>		
+					
+					<div class="ship-choose">
+						<div class="ship-img"><img id="rocket-icon2" src="images/ship2.svg" alt="Rocket"></div>								
+						<div class="content-list rocket-info">
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Имя</a></span>
+								<span id="name2">Ястреб-321</span>
+							</div>
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Скорость</a></span>
+								<span id="speed2">7 км\c</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Экипаж</a></span>
+								<span id="capacity2">3</span>
+							</div>
+						</div>
+						<div class="radio-field">
+							<input type="radio" name="ship-choose" class="radio" id="radio2" value="2" /><label for="radio2">Выбрать</label>
+						</div>
+					</div>	
+
+					<div class="ship-choose">
+						<div class="ship-img"><img id="rocket-icon3" src="images/ship3.svg" alt="Rocket"></div>								
+						<div class="content-list rocket-info">
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Имя</a></span>
+								<span id="name3">Сокол-345</span>
+							</div>
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Скорость</a></span>
+								<span id="speed3">8 км\c</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Экипаж</a></span>
+								<span id="capacity3">2</span>
+							</div>
+						</div>
+						<div class="radio-field">
+							<input type="radio" name="ship-choose" class="radio" id="radio3" checked value="3" /><label for="radio3">Выбрать</label>
+						</div>
+					</div>	
+				</div>	
+			</div>
+			<div class="site-main" id="crewchoice">
+				<div class="left-content"><h1>Сбор команды</h1></div>             		
+			</div>
+			<div class="site-main" id="weatherchoice">
+				<div class="left-content"><h1>Проверка погодных условий</h1></div>  		
+			</div>		
 		</div>
-		<div class="weather">
-			<div class="weather-header">
-				<span><b>Погодные условия</b></span>
-			</div>
-			<hr>
-			<div class="weather-list">
-				<span class="lefttext">Локация</span><span class="righttext">Космодром Северный </span>
-				<hr>
-				<span class="lefttext">Температура</span><span class="righttext">+15</span>
-				<hr>
-				<span class="lefttext">Влажность</span><span class="righttext">в чем там измеряют влажность</span>
-				<hr>
-				<span class="lefttext">Ветер</span><span class="righttext">5 м\с, СЗ</span>
-			</div>
-		</div>
-		<div class="crew">
-		<div class="crew-header">
-			<span><b>Экипаж</b></span>
-			</div>
-			<hr>
-			<div class="crew-list">
-				<div>
-				<span class="captain">Капитан</span><span class="righttext">Константин Константинопольский</span>
-				<hr>
-				</div>
-				<div>
-				<span class="engineer">Борт инженер</span><span class="righttext">Иван Иванов</span>
-				<hr>
-				</div>
-				<div>
-				<span class="doctor">Врач</span><span class="righttext">Петр Петров</span>
-				<hr>
-				</div>
-				<div>
-				<span class="spacemarine">Космодесантник</span><span class="righttext">Анастасия Преображенская</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="shipchoice"><h1>Выбор корабля</h1></div>
-	<div id="crewchoice"><h1>Сбор команды</h1></div>
-	<div id="temchoice"><h1>Проверка погодных условий</h1></div>
-</div>
-</body>
+	</body>
+	<script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src='script.js'></script>	
 </html>
