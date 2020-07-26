@@ -11,9 +11,9 @@ class Rocket{
     }
 }
 
-var icons = document.querySelectorAll(".nav-icon");
-var contents = document.querySelectorAll(".site-main");
-var radio = document.querySelectorAll(".radio");
+let icons = document.querySelectorAll(".nav-icon");
+let contents = document.querySelectorAll(".site-main");
+let radio = document.querySelectorAll(".radio");
 
 $(document).ready(function(){
     contents[0].style.display='block';
@@ -35,7 +35,7 @@ function showElement(){
     document.querySelector(".clicked").classList.remove("clicked");  
     this.classList.add("clicked");
                     
-    var ind  = Array.prototype.indexOf.call(icons, this);
+    let ind  = Array.prototype.indexOf.call(icons, this);
     contents.forEach(
         function(currentValue){
             currentValue.style.display = "none";
@@ -45,11 +45,11 @@ function showElement(){
 }
 
 function changeShip(){
-    var id = this.id.substring(this.id.length-1);
-    var name = document.querySelector("#name"+id).innerHTML;
-    var speed = document.querySelector("#speed"+id).innerHTML;
-    var capacity = document.querySelector("#capacity"+id).innerHTML;
-    var icon = document.querySelector("#rocket-icon"+id).src;
+    let id = this.id.substring(this.id.length-1);
+    let name = document.querySelector("#name"+id).innerHTML;
+    let speed = document.querySelector("#speed"+id).innerHTML;
+    let capacity = document.querySelector("#capacity"+id).innerHTML;
+    let icon = document.querySelector("#rocket-icon"+id).src;
 
     document.querySelector("#rocket-icon").src = icon;
     document.querySelector("#rocket-name").innerHTML = name;
@@ -58,9 +58,9 @@ function changeShip(){
 }
 
 function buildRocket() {
-    var name = document.querySelector("#rocket-name").innerHTML;
-    var speed = document.querySelector("#rocket-speed").innerHTML;
-    var capacity = document.querySelector("#rocket-capacity").innerHTML;
-    var icon = document.querySelector("#rocket-icon").src;
-    var rocket = new Rocket(name, speed, capacity, icon);
+    let name = document.querySelector("#rocket-name").innerHTML;
+    let speed = document.querySelector("#rocket-speed").innerHTML;
+    let capacity = document.querySelector("#rocket-capacity").innerHTML;
+    let icon = document.querySelector("#rocket-icon").src;
+    let rocket = new Rocket(name, speed, capacity, icon);
 }

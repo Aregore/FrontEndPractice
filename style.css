@@ -9,7 +9,8 @@ body{
 	font-style: normal;
 }
 h1{
-	font-size: 40px;
+	line-height:56px;
+	font-size: 48px;
 }
 .bodypage{
 	flex-wrap: wrap;
@@ -51,7 +52,7 @@ h1{
 
 .right{
 	float: right;
-	padding-right: 5%;
+	padding-right: 15%;
 }
 
 .left-content, .right-content{
@@ -63,10 +64,11 @@ h1{
 	top: 0px;
 	right: 0px;
 }
-.right-content img{
+.planet-img{
 	width: auto;
     height: 350px;
 	display: block;
+	border-radius: 0px 40px 0px 0px;
 }
 .underline{
 	border-bottom: 1px solid #D8DCE3;
@@ -76,7 +78,25 @@ h1{
 	padding-top: 3%;
 }
 
-.status{
+.main-status{
+	width: 165%;
+	margin-top: 15%;
+	margin-left: auto;
+	height: auto;
+	background: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.weather-status{
+	width: 165%;
+	margin-top: 15%;
+	margin-left: auto;
+	height: auto;
+	background: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.crew-status{
 	width: 165%;
 	margin-top: 15%;
 	margin-left: auto;
@@ -110,9 +130,23 @@ h1{
 a{
 	text-decoration: none;
 }
-
-
-.content-list{
+.rocket-img{
+	width: auto;
+    height: 450px;
+	display: block;
+	padding-top:25%;
+}
+.weather-list{
+	display: inline-grid;
+	width: 60%;
+	padding: 4%;
+}
+.crew-list{
+	display: inline-grid;
+	width: 60%;
+	padding: 4%;
+}
+.ship-list{
 	display: inline-grid;
 	width: 60%;
 	padding: 4%;
@@ -120,16 +154,40 @@ a{
 .bold{
 	font-weight: bold;
 }
-.content-list div{
+.bold.__captain{
+	color: red;
+}
+.bold.__engineer{
+	color: orange;
+}
+.bold.__doctor{
+	color: green;
+}
+.bold.__marine{
+	color: blue;
+}
+.weather-list div{
 	padding-left: 4%;
 	width: 150%;
 	float: left;
 }
-.content-list div span{
+.crew-list div{
+	padding-left: 4%;
+	width: 150%;
+	float: left;
+}
+.weather-list div span{
 	width: 50%;
 	float: left;
 }
-
+.crew-list div span{
+	width: 50%;
+	float: left;
+}
+.ship-list div span{
+	width: 50%;
+	float: left;
+}
 #ships{
 	width: 1100px;
 }
