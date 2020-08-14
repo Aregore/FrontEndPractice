@@ -1,0 +1,486 @@
+@font-face {
+    font-family: Roboto;
+    src: url(Roboto/Roboto-Regular.ttf);
+   }
+body{
+	background-image: url('images/background.svg');
+	padding: 100px 100px 100px 100px;
+	font-family: Roboto;
+	font-style: normal;
+}
+h1{
+	line-height:56px;
+	font-size: 48px;
+}
+.text{
+    
+}
+.bodypage{
+	flex-wrap: wrap;
+	display: block;
+	width:1300px;
+	height:900px;
+	background: #F4F6F9;
+	position: absolute;
+	left: 15%;
+	top: 2%;
+	border-radius: 40px 40px 40px 40px;
+}
+
+.nav{
+	width:10%;
+	height:100%;
+	background: #FF5800;;
+	border-radius: 40px 0px 0px 40px;
+	float: left;
+}
+
+.site-main{
+	display: none;
+	position: center;
+	/*padding: 35px;*/
+	padding-left: 65px;
+	float: left;
+}
+
+.nav-icon{
+	padding: 20%;
+	padding-bottom: 30%;
+	opacity: 0.5;
+}
+
+.nav-icon:hover, .clicked{
+	opacity: 1;
+}
+
+.right1{
+	float: right;
+	padding-right: 15%;
+}
+.right2{
+	float: right;
+	padding-right: 20%;
+}
+
+.left-content, .right-content{
+	position: relative;
+	display: inline;
+}
+.right-content{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.planet-img{
+	width: auto;
+    height: 350px;
+	display: block;
+	border-radius: 0px 40px 0px 0px;
+}
+.underline{
+	border-bottom: 1px solid #D8DCE3;
+}
+.text-padding{
+	padding-bottom: 3%;
+}
+
+.main-status{
+	width: 175%;
+	margin-top: 15%;
+	margin-left: auto;
+	height: auto;
+	background: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.ship-status{
+	width: 40%;
+	height: auto;
+	background: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.weather-status{
+	width: 175%;
+	margin-top: 15%;
+	margin-left: auto;
+	height: auto;
+	background: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.crew-status{
+	width: 175%;
+	margin-top: 15%;
+	background: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.crew-hire{
+        display:inline-block;
+	width: 110%;
+	margin-bottom: 15%;
+	margin-left: auto;
+	height: auto;
+	background: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+}
+.crewdetails{
+    float:right;
+    margin-top: 2%;
+}
+.status-header{
+	padding-top: 3%;
+	padding-left: 5%;
+}
+.button-go{	
+	background: #E4E4E4;
+	border: none;
+	width: 30%;
+	height: 3.5%;
+	border-radius: 10px;
+        float:right;
+        margin-right: 20px;
+}
+.status-list{
+	padding-bottom: 2%;
+	padding-left: 11%;
+}
+.status-list li{
+	list-style-image: url("images/redstat.png");
+	padding-bottom: 2%;
+}
+.status-list li:last-child{
+	list-style-image: url("images/greenstat.png");
+}
+a{
+	text-decoration: none;
+}
+.rocket-img{
+	width: auto;
+        height: 450px;
+	display: block;
+	padding-top:25%;
+}
+.weather-list{
+	display: inline-grid;
+	width: 60%;
+	padding: 4%;
+}
+.crew-list{
+	display: inline-grid;
+	width: 60%;
+	padding: 4%;
+}
+.crew-choose-list{
+	display: inline-grid;
+	width: 93%;
+	padding: 4%;
+}
+.crew-check{
+	display: inline-grid;
+	width: 60%;
+	padding-left: 4%;
+	padding-top: 3%;
+}
+.ship-list{
+	display: inline-grid;
+	width: 60%;
+	padding: 4%;
+}
+.bold{
+	font-weight: bold;
+}
+.bold.__captain{
+	color: #FF7D84;
+}
+.bold.__engineer{
+	color: #E69F54;
+}
+.bold.__doctor{
+	color: #64D03F;
+}
+.bold.__marine{
+	color: #5A95F2;
+}
+.weather-list div{
+	padding-left: 4%;
+	width: 150%;
+	float: left;
+}
+.crew-list div{
+	padding-left: 4%;
+	width: 150%;
+	float: left;
+}
+.weather-list div span{
+	width: 50%;
+	float: left;
+        padding-top:1%;
+}
+.crew-list div span{
+	width: 50%;
+	float: left;
+        padding-top: 1%;
+}
+.crew-choose-list div span{
+	width: 50%;
+	float: left;
+        padding-top: 2%;
+        padding-left:5%;
+}
+.crew-check div span{
+	width: 50%;
+	float: left;
+}
+.ship-list div span{
+	width: 50%;
+	float: left;
+}
+#ships{
+	width: 1100px;
+}
+.ship{
+	width: 100%;
+	margin: 0;
+}
+.ship .rocket-info .text-padding{
+	width: 60%;
+}
+.build-rocket-btn{
+	width: 130%;
+	background-color: #73E24D;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+	color: white;
+	border-radius: 10px;
+	border: none;
+	height: 3%;
+}
+.build-crew-btn{
+	width: 200%;
+	background-color: #73E24D;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+	color: white;
+	border-radius: 10px;
+	border: none;
+	height: 12%;
+}
+.build-crew-btn-active{
+	width: 200%;
+	background-color: #73E24D;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+	color: white;
+	border-radius: 10px;
+	border: none;
+	height: 12%;
+}
+.build-crew-btn-inactive{
+	width: 200%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+	color: white;
+	border-radius: 10px;
+	border: none;
+	height: 12%;
+}
+.rocket-info{
+	padding: 10px;
+}
+.rocket-info div{
+	width: 100%;
+}
+.ship-img{
+	margin-top: 3%;
+	margin-left: 5%;
+	margin-right: 3%;
+    float: left;
+	display: inline-block;
+}
+.ship-choose{
+	display: inline-block;
+	padding-top: 10px;
+	width: 30%;
+	margin-top: 5%;
+	margin-right: 5%;
+	background: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	border: 1px black solid;
+}
+.ship-choose img{
+	height: 80px;
+}
+#crewchoice{
+    width:80%;
+}
+#rocket-icon{
+	height: 80px;
+	width: 80px;
+}
+.left-part, .right-part{
+    display:inline-block;
+    width:40%;
+    margin-right:100px;
+}
+.radio-field{
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 35%;
+	margin-top: 20px;
+	background-color: #D1E1FA;
+	border-radius: 0px 0px 10px 10px;
+	border-top: 1px solid black;
+	float: initial;
+}
+.radio-field input::after{
+	background-color: lawngreen;
+}
+.radio {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 7px;
+}
+.radio + label {
+	position: relative;
+	padding: 0 0 0 35px;
+	cursor: pointer;
+}
+.radio + label:before {
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 22px;
+	height: 22px;
+	border: 1px solid #CDD1DA;
+	border-radius: 50%;
+	background: #FFF;
+}
+.radio + label:after {
+	content: '';
+	position: absolute;
+	top: 1px;
+	left: 4px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #9FD468;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+	opacity: 0;
+	transition: .2s;
+}
+.radio:checked + label:after {
+	opacity: 1;
+}
+.radio:focus + label:before {
+	box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+}
+.fixed-height{
+	height:200px;
+}
+#captain1,#captain2,#doctor1,#doctor2,#engi1,#engi2,#marine1,#marine2{
+    float:left;
+}
+.teamimg{
+    width: 20px;
+    height: 20px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    display:inline-grid;
+    float:left;
+    margin-left:5px;
+    margin-right:10px;
+}
+.captain1{
+    background-image:url(images/cap1.svg);
+}
+
+.captain2{
+    background-image:url(images/cap2.svg);
+}
+
+.doctor1{
+    background-image:url(images/med1.svg);
+}
+
+.doctor2{
+    background-image:url(images/med2.svg);
+}
+
+.engineer1{
+    background-image:url(images/eng1.svg);
+}
+
+.engineer2{
+    background-image:url(images/eng2.svg);
+}
+
+.marine1{
+    background-image:url(images/mar1.svg);
+}
+
+.marine2{
+    background-image:url(images/mar2.svg);
+} 
+.img-height{
+    height:25px;
+}
+#rocket-icon-choice{
+    height:90px;
+}
+.checkbox {
+    margin: 0 0 10px 0;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+.checkbox input[type=checkbox] {
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+.checkbox span {
+    display: inline-block;
+    padding: 0 0 0 35px;
+    line-height: 22px;    
+}
+.checkbox span:before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 120;
+    top: 7;
+    transition: background 0.3s ease;
+    background: url(https://snipp.ru/uploads/contents/checkbox-1.png) 0 0 no-repeat;
+}
+
+.checkbox input[type=checkbox]:checked + span:before {
+    background-image: url(https://snipp.ru/uploads/contents/checkbox-2.png);
+}
+
+
+.focused span:before {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.checkbox span:hover:before {
+    filter: brightness(110%);
+}
+
+.checkbox span:active:before {
+    filter: brightness(80%);
+}
+
+.checkbox input[type=checkbox]:disabled + span {
+    color: #666;
+    cursor: default;
+}
+.checkbox input[type=checkbox]:disabled + span:before {
+    filter: grayscale(100%);
+    opacity: 0.6;
+}

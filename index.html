@@ -1,0 +1,307 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> To infinity and beyond </title>
+		<link rel="stylesheet" type="text/css" href="style.css">			
+	</head>
+	
+	<body>
+		<div class="bodypage">
+			<nav class="nav">
+				<img class="nav-icon clicked" id="main_button" src="images/earth.svg" alt="Planet">
+				<img class="nav-icon" id="ships_button" src="images/ship3.svg" alt="Rocket">
+				<img class="nav-icon" id="crew_button" src="images/spacesuit.svg" alt="Spacesuit">
+				<img class="nav-icon" id="weather_button" src="images/thermometer.svg" alt="Thermometer">
+			</nav>
+			<div class="site-main" id="main">
+				<div class="left-content">
+					<div class="main-status">
+						<div class="status-header underline text-padding">
+							<span><b>Статус</b></span>
+							<button class="button-go" disabled>Поехали!</button>
+						</div>					
+						<div>
+							<ul class="status-list">
+								<li>Ракета выбрана</li>
+								<li>Команда собрана</li>
+								<li>Погода - ок</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="weather-status">
+						<div class="status-header underline text-padding">
+							<span><b>Погодные условия</b></span>
+						</div>	
+						<div class="weather-list">
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Локация</a></span>
+								<span>Космодром Северный</span>
+							</div>						
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Температура</a></span>
+								<span>+15</span>
+							</div>						
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Влажность</a></span>
+								<span>В чем там измеряется влажность</span>
+							</div>						
+							<div class="text-padding">
+								<span class="bold"><a href="#">Ветер</a></span>
+								<span>5 м/c СЗ</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="crew-status">
+						<div class="status-header underline text-padding">
+							<span><b>Экипаж</b></span>
+						</div>	
+						<div class="crew-list">
+							<div class="underline text-padding">
+								<span class="bold __captain">Капитан</span>
+								<span>Константин Константинопольский</span>
+							</div>						
+							<div class="underline text-padding">
+								<span class="bold __engineer">Инженер</span>
+								<span>Иван Иванов</span>
+							</div>						
+							<div class="underline text-padding">
+								<span class="bold __doctor">Врач</span>
+								<span>Петр Петров</span>
+							</div>						
+							<div class="text-padding" >
+								<span class="bold __marine">Космодесантник</span>
+								<span>Анастасия Преображенская</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right-content">
+					<img class="planet-img" src="images/cornerplanet.svg">
+					<img class="rocket-img" src="images/mainrocket.svg">
+				</div>				
+			</div>
+			<div class="site-main" id="ships">	
+				<div class="left-content">
+					<h1>Выбор корабля</h1>
+					<div class="ship-status">
+						<div class="status-header underline text-padding">
+							<span><b>Корабль</b></span>
+							<span class="right1"><button id="build-rocket" class="build-rocket-btn">Собрать ракету</button></span>
+						</div>	
+						<div class="ship-img"><img id="rocket-icon" src="images/ship3.svg" alt="Rocket"></div>								
+						<div class="ship-list rocket-info">
+							<div class="text-padding">
+								<span class="bold"><a href="#">Имя</a></span>
+								<span id="rocket-name">Сокол-345</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Скорость</a></span>
+								<span id="rocket-speed">8 км\c</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Экипаж</a></span>
+								<span id="rocket-capacity">2</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="ship-choose">
+						<div class="ship-img"><img id="rocket-icon1" src="images/ship1.svg" alt="Rocket"></div>								
+						<div class="ship-list rocket-info">
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Имя</a></span>
+								<span id="name1">Урског-123</span>
+							</div>
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Скорость</a></span>
+								<span id="speed1">6 км\c</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Экипаж</a></span>
+								<span id="capacity1">4</span>
+							</div>
+						</div>
+						<div class="radio-field">
+							<input type="radio" name="ship-choose" class="radio" id="radio1" value="1" /><label for="radio1">Выбрать</label>
+						</div>
+					</div>		
+					
+					<div class="ship-choose">
+						<div class="ship-img"><img id="rocket-icon2" src="images/ship2.svg" alt="Rocket"></div>								
+						<div class="ship-list rocket-info">
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Имя</a></span>
+								<span id="name2">Ястреб-321</span>
+							</div>
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Скорость</a></span>
+								<span id="speed2">7 км\c</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Экипаж</a></span>
+								<span id="capacity2">3</span>
+							</div>
+						</div>
+						<div class="radio-field">
+							<input type="radio" name="ship-choose" class="radio" id="radio2" value="2" /><label for="radio2">Выбрать</label>
+						</div>
+					</div>	
+
+					<div class="ship-choose">
+						<div class="ship-img"><img id="rocket-icon3" src="images/ship3.svg" alt="Rocket"></div>								
+						<div class="ship-list rocket-info">
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Имя</a></span>
+								<span id="name3">Сокол-345</span>
+							</div>
+							<div class="underline text-padding">
+								<span class="bold"><a href="#">Скорость</a></span>
+								<span id="speed3">8 км\c</span>
+							</div>
+							<div class="text-padding">
+								<span class="bold"><a href="#">Экипаж</a></span>
+								<span id="capacity3">2</span>
+							</div>
+						</div>
+						<div class="radio-field">
+							<input type="radio" name="ship-choose" class="radio" id="radio3" checked value="3" /><label for="radio3">Выбрать</label>
+						</div>
+					</div>	
+				</div>	
+			</div>
+			<div class="site-main" id="crewchoice">
+				<h1>Сбор команды</h1>   
+                                    <div class="left-part">
+                                        <div class='crew-hire fixed-height'>
+                                            <div class="status-header underline text-padding">
+                                                            <span><b>Команда</b></span> 
+                                                            <span class="right2"><button id="gather-crew" class="build-crew-btn-inactive" onclick="TeamBuilding()">Готово</button></span>
+                                            </div>	
+                                            <div class="crew-check">
+                                                <div class="text-padding img-height">
+                                                        <span class="bold __captain">Капитан</span>
+                                                        <div class="teamimg captain1" id="captain1"></div> 
+                                                        <div class="teamimg captain2" id="captain2"></div>
+                                                </div>
+                                                <div class="text-padding img-height">
+                                                        <span class="bold __engineer">Инженер</span>
+                                                        <div class="teamimg engineer1" id="engineer1"></div> 
+                                                        <div class="teamimg engineer2" id="engineer2"></div>
+                                                </div>						
+                                                <div class="text-padding img-height">
+                                                        <span class="bold __doctor">Врач</span>
+                                                        <div class="teamimg doctor1" id="doctor1"></div>
+                                                        <div class="teamimg doctor2" id="doctor2"></div>
+                                                </div>						
+                                                <div class="text-padding img-height" >
+                                                        <span class="bold __marine">Космодесантник</span>
+                                                        <div class="teamimg marine1" id="marine1"></div> 
+                                                        <div class="teamimg marine2" id="marine2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='crew-hire fixed-height'>
+                                            <div class="status-header underline text-padding">
+                                                            <span class="bold __captain"><b>Капитан</b></span> 
+                                            </div>	
+                                            <div class="crew-choose-list">
+							<div class="underline text-padding">
+								<img id="captain1" src="images/cap1.svg" alt="Captain1">
+								<span>Дюк Нюкем</span>
+                                                                <label class="checkbox"><input type="checkbox" class="crewdetails" id="Дюк Нюкем" value="1" name="captain"><span></span></label>
+							</div>						
+							<div class="text-padding">
+								<img id="captain2" src="images/cap2.svg" alt="Captain2">
+								<span>Капитан Прайс</span>
+                                                                <label class="checkbox"><input type="checkbox" class="crewdetails" id="Капитан Прайс" value="2" name="captain"><span></span></label>
+							</div>						
+						</div>
+                                        </div>
+                                        <div class='crew-hire fixed-height'>
+                                            <div class="status-header underline text-padding">
+                                                            <span class="bold __doctor"><b>Врач</b></span> 
+                                            </div>	
+                                            <div class="crew-choose-list">
+							<div class="underline text-padding">
+                                                                <img id="doctor1" src="images/med1.svg" alt="Medic1">
+								<span>Доктор Хаус</span>
+                                                                <label class="checkbox"><input type="checkbox" class="crewdetails" id="Доктор Хаус" value="1" name="doctor"><span></span></label>
+							</div>						
+							<div class="text-padding">
+								<img id="doctor2" src="images/med2.svg" alt="Medic2">
+								<span>Джей ди</span>
+                                                                <label class="checkbox"><input type="checkbox" class="crewdetails" id="Джей Ди" value="2" name="doctor"><span></span></label>
+							</div>						
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right-part">
+                                        <div class='crew-hire fixed-height'>
+                                            <div class="ship">
+                                                    <div class="status-header underline text-padding">
+                                                            <span><b>Корабль</b></span>
+                                                    </div>	
+                                                    <div class="ship-img"><img id="rocket-icon-choice" src="images/ship3.svg" alt="Rocket"></div>								
+                                                    <div class="ship-list">
+                                                            <div class="text-padding">
+                                                                    <span class="bold"><a href="#">Имя</a></span>
+                                                                    <span id="rocket-name-choice">Сокол-345</span>
+                                                            </div>
+                                                            <div class="text-padding">
+                                                                    <span class="bold"><a href="#">Скорость</a></span>
+                                                                    <span id="rocket-speed-choice">8 км\c</span>
+                                                            </div>
+                                                            <div class="text-padding">
+                                                                    <span class="bold"><a href="#">Экипаж</a></span>
+                                                                    <span id="rocket-capacity-choice">2</span>
+                                                            </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class='crew-hire fixed-height'>
+                                            <div class="status-header underline text-padding">
+                                                            <span class="bold __engineer"><b>Инженер</b></span> 
+                                            </div>	
+                                            <div class="crew-choose-list">
+							<div class="underline text-padding">
+								<img id="engi1" src="images/eng1.svg" alt="Engineer1">
+								<span>Айзек Кларк</span>
+                                                                <label class="checkbox"><input type="checkbox" class="crewdetails" id="Айзек Кларк" value="1" name="engineer"><span></span></label>
+							</div>						
+							<div class="text-padding">
+								<img id="engi2" src="images/eng2.svg" alt="Engineer2">
+								<span>Илон Маск</span>
+                                                                 <label class="checkbox"><input type="checkbox" class="crewdetails" id="Илон Маск" value="2" name="engineer"><span></span></label>
+							</div>						
+                                            </div>
+                                        </div>
+                                        <div class='crew-hire fixed-height'>
+                                            <div class="status-header underline text-padding">
+                                                            <span class="bold __marine"><b>Космодесантник</b></span> 
+                                            </div>	
+                                            <div class="crew-choose-list">
+							<div class="underline text-padding">
+								<img id="marine1" src="images/mar1.svg" alt="Marine1">
+								<span>Дум Слеер</span>
+                                                                <label class="checkbox"><input type="checkbox" class="crewdetails" id="Дум Слеер" value="1" name="marine"><span></span></label>
+							</div>						
+							<div class="text-padding">
+								<img id="marine2" src="images/mar2.svg" alt="Marine2">
+								<span>Макс Пейн</span>
+                                                                <label class="checkbox"><input type="checkbox" class="crewdetails" id="Макс Пейн" value="2" name="marine"><span></span></label>
+							</div>						
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    <div class="site-main" id="weatherchoice">
+				<div class="left-content"><h1>Проверка погодных условий</h1></div>  		
+                    </div>
+                </div>
+			
+	</body>
+	<script src="http://code.jquery.com/jquery-3.5.1.js"></script> <!-- не забудь вернуть нормальный jquery-->
+	<script src='script.js'></script>	
+</html>
